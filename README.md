@@ -29,10 +29,10 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-
-<div style="position: relative; padding-bottom: 77.6978417266187%; height: 0;"><iframe src="https://www.loom.com/embed/50d72c66195c4cffbac1b303889455f3?sid=e5624d8d-7a7b-4155-a85e-5aad75ac83de" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
-
 Here's a walkthrough of implemented required features:
+### Project Demo
+
+[Watch the video demo on Loom](https://www.loom.com/embed/50d72c66195c4cffbac1b303889455f3?sid=e5624d8d-7a7b-4155-a85e-5aad75ac83de)
 
 
 
