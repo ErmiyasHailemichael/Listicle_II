@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
-
+// it is not working 
 // Search items by name or category
 router.get('/search', async (req, res) => {
     const { query } = req.query; // Get the search query from the request parameters
@@ -56,3 +56,5 @@ router.post('/', async (req, res) => {
 
 // Export the router
 export default router;
+
+// upate git
