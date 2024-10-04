@@ -73,6 +73,7 @@ router.get('/', async (req, res) => {
         let query = 'SELECT * FROM items';
         if (search) {
             query += ` WHERE title ILIKE $1 OR description ILIKE $1`;
+            console.log(`Query: ${query}`);  // Debugging the SQL query
             const items = await pool.query(query, [`%${search}%`]);
             return res.json(items.rows);
         }
@@ -84,13 +85,31 @@ router.get('/', async (req, res) => {
     }
 });
 
+
 // Fetch a single item by ID
+// router.get('/:id', async (req, res) => {
+//     const { id } = req.params;
+//     try {
+//         const item = await pool.query('SELECT * FROM items WHERE id = $1', [id]);
+//         if (item.rows.length > 0) {
+//             res.json(item.rows[0]);
+//         } else {
+//             res.status(404).json({ error: 'Item not found' });
+//         }
+//     } catch (err) {
+//         console.error(err);
+//         res.status(500).json({ error: 'Internal server error' });
+//     }
+// });
+// routes/items.js
+
+// Make sure all fields are being selected
 router.get('/:id', async (req, res) => {
-    const { id } = req.params;
+    const { id } = req.params;  // The item ID from the URL
     try {
-        const item = await pool.query('SELECT * FROM items WHERE id = $1', [id]);
+        const item = await pool.query('SELECT * FROM items WHERE id = $1', [id]);  // Query database for the specific item
         if (item.rows.length > 0) {
-            res.json(item.rows[0]);
+            res.json(item.rows[0]);  // Send back the first item as a JSON response
         } else {
             res.status(404).json({ error: 'Item not found' });
         }
@@ -99,6 +118,8 @@ router.get('/:id', async (req, res) => {
         res.status(500).json({ error: 'Internal server error' });
     }
 });
+
+
 
 export default router;
 

@@ -106,3 +106,69 @@ body {
         width: 100%; /* Full width for search input */
     }
 }
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+}
+
+/* Item image */
+.item-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+/* Item title */
+h1 {
+    font-size: 2em;
+    margin: 10px 0;
+    color: #333;
+}
+
+/* Item description */
+.description {
+    font-size: 1.2em;
+    color: #555;
+    margin: 20px 0;
+}
+
+/* Category and submitted by */
+.meta-info {
+    font-size: 1em;
+    color: #888;
+    margin: 10px 0;
+}
+
+.meta-info span {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Make the page responsive */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+}

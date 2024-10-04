@@ -1,19 +1,20 @@
-<!-- client/detail.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Item Detail</title>
-    <link rel="stylesheet" href="src/assest/css/style.css">
+    <link rel="stylesheet" href="./src/assest/css/style.css"> <!-- Your CSS file -->
 </head>
 <body>
-    <div id="detail-container">
-        <h1>Item Detail</h1>
-        <div id="item-details"></div>
-        <a href="index.html">Back to Home</a>
+    <div class="container">
+        <h1 id="item-title">Item Title</h1>
+        <img id="item-image" class="item-image" src="" alt="Item Image">
+        <p class="description" id="item-text">Item Text</p>
+        <p class="meta-info">Category: <span id="item-category">Category</span></p>
+        <p class="meta-info">Submitted by: <span id="item-submittedby">Submitted by</span></p>
     </div>
 
-    <script src="js/detail.js"></script>
+    <script src="./detail.js"></script> <!-- Make sure the correct path to JS file -->
 </body>
 </html>
