@@ -10,12 +10,14 @@ body {
 /* Search Container Styles */
 #search-container {
     margin: 20px auto;
-    text-align: center;
+    display: flex; /* Use flexbox to align items in a row */
+    justify-content: center; /* Center items horizontally */
+    gap: 10px; /* Space between input and button */
 }
 
 #search-input {
     padding: 10px;
-    width: 300px;
+    width: 300px; /* Set a fixed width for the input */
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 16px; /* Increase font size */
@@ -28,7 +30,6 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer; /* Change cursor to pointer */
-    margin-left: 10px; /* Spacing between input and button */
     font-size: 16px; /* Increase font size */
     transition: background-color 0.3s; /* Smooth transition */
 }
@@ -106,19 +107,8 @@ body {
         width: 100%; /* Full width for search input */
     }
 }
-/* General styling */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
 
+/* General styling */
 .container {
     background-color: #fff;
     padding: 20px;
