@@ -1,6 +1,6 @@
 # Listicle_II
 
-# WEB103 Project 2 - *Name of App Here*
+# WEB103 Project 2 - Listicle_II
 
 Submitted by: **Your name here**
 
@@ -13,31 +13,28 @@ Time spent: **X** hours
 The following **required** functionality is completed:
 
 <!-- Make sure to check off completed functionality below -->
-- [ ] **The web app uses only HTML, CSS, and JavaScript without a frontend framework**
-- [ ] **The web app is connected to a PostgreSQL database, with an appropriately structured database table for the list items**
-- [ ] **The PostgreSQL database includes a table that matches the data displayed in the web app**
-  - [ ] **NOTE: Your GIF or a screenshot added to the README must include a view of your Railway database that shows the contents of the table used by your app**
+- [x] **The web app uses only HTML, CSS, and JavaScript without a frontend framework**
+- [x] **The web app is connected to a PostgreSQL database, with an appropriately structured database table for the list items**
+- [x] **The PostgreSQL database includes a table that matches the data displayed in the web app**
+  - [x] **NOTE: Your GIF or a screenshot added to the README must include a view of your Railway database that shows the contents of the table used by your app**
 
 The following **optional** features are implemented:
 
-- [ ] The user can search for items with a specific attribute
+- [x] The user can search for items with a specific attribute
 
 The following **additional** features are implemented:
 
 - [ ] List anything else that you added to improve the site's functionality!
+- [x] Responsive web app
 
 ## Video Walkthrough
 
+
+<div style="position: relative; padding-bottom: 77.6978417266187%; height: 0;"><iframe src="https://www.loom.com/embed/50d72c66195c4cffbac1b303889455f3?sid=e5624d8d-7a7b-4155-a85e-5aad75ac83de" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe></div>
+
 Here's a walkthrough of implemented required features:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-<!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  GIF tool here
-<!-- Recommended tools:
-[Kap](https://getkap.co/) for macOS
-[ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
 
 ## Notes
 
