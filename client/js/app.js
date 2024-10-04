@@ -1,21 +1,19 @@
 // //app.js
 const itemsContainer = document.getElementById('items-container');
-let items = []; // Declare a global variable to store fetched items
-
-// Function to fetch and display items
+let items = []; 
 async function fetchItems() {
     try {
         const response = await fetch('http://localhost:3000/items'); 
-        items = await response.json(); // Store fetched items in the global variable
+        items = await response.json(); 
         displayItems(items);
     } catch (error) {
         console.error('Error fetching items:', error);
     }
 }
 
-// Function to display items in cards
+
 function displayItems(itemsToDisplay) {
-    itemsContainer.innerHTML = ''; // Clear existing items
+    itemsContainer.innerHTML = ''; 
     itemsToDisplay.forEach(item => {
         const card = document.createElement('div');
         card.className = 'card';
@@ -30,7 +28,6 @@ function displayItems(itemsToDisplay) {
     });
 }
 
-// Function to filter items based on search input
 function filterItems() {
     const searchInput = document.getElementById('search-input').value.toLowerCase();
     const filteredItems = items.filter(item => 
@@ -38,11 +35,10 @@ function filterItems() {
         item.description.toLowerCase().includes(searchInput) ||
         item.category.toLowerCase().includes(searchInput)
     );
-    displayItems(filteredItems); // Display the filtered items
+    displayItems(filteredItems); 
 }
 
-// Event listener for search input
+
 document.getElementById('search-input').addEventListener('input', filterItems);
 
-// Fetch all items on page load
 fetchItems();
