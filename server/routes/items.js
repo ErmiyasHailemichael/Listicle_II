@@ -5,6 +5,7 @@ import { pool } from '../config/database.js'; // Import the database connection 
 
 const router = Router();
 
+
 // GET all items
 router.get('/', async (req, res) => {
     try {
@@ -15,14 +16,15 @@ router.get('/', async (req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
-// it is not working 
+
 // Search items by name or category
+// Search items
 router.get('/search', async (req, res) => {
-    const { query } = req.query; // Get the search query from the request parameters
+    const { query } = req.query; // Assume you're sending a 'query' parameter
     try {
         const result = await pool.query(
-            `SELECT * FROM items WHERE name ILIKE $1 OR category ILIKE $1`, 
-            [`%${query}%`] // Use ILIKE for case-insensitive search
+            `SELECT * FROM items WHERE name ILIKE $1 OR description ILIKE $1`,
+            [`%${query}%`]
         );
         res.json(result.rows);
     } catch (error) {
@@ -30,6 +32,7 @@ router.get('/search', async (req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
+
 
 // POST new item
 router.post('/', async (req, res) => {
@@ -56,5 +59,3 @@ router.post('/', async (req, res) => {
 
 // Export the router
 export default router;
-
-// upate git
