@@ -1,69 +1,19 @@
+<!-- client/detail.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Article Detail</title>
-    <link rel="stylesheet" href="./src/assest/css/style.css"> 
+    <title>Item Detail</title>
+    <link rel="stylesheet" href="src/assest/css/style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 id="article-title">Article Title</h1>
-        <img id="article-image" src="" alt="Article Image">
-        <p id="article-description"></p>
-        <p id="article-text"></p>
-        <p id="article-category"></p>
-        <button onclick="goBack()">Go Back</button> 
+    <div id="detail-container">
+        <h1>Item Detail</h1>
+        <div id="item-details"></div>
+        <a href="index.html">Back to Home</a>
     </div>
 
-    <script>
-        // Get the article ID from the URL
-        const params = new URLSearchParams(window.location.search);
-        const id = params.get('id'); // Get the article ID from the URL
-
-        // Simulated data fetching (replace with your actual data fetching logic)
-        const articles = [
-            {
-                id: 1,
-                name: "Brainstorm Business Ideas",
-                description: "This is a detailed description of the business idea.",
-                text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-                category: "Business Models",
-                image: "https://images.pexels.com/photos/590041/pexels-photo-590041.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            },
-            {
-                id: 2,
-                name: "Build a Web App",
-                description: "This is a detailed description of building a web app.",
-                text: "Web applications have become essential in modern technology...",
-                category: "Web Development",
-                image: "https://images.pexels.com/photos/3861965/pexels-photo-3861965.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-            },
-            // Add more articles as needed
-        ];
-
-        // Function to display the article details
-        function displayArticle() {
-            const article = articles.find(item => item.id == id); // Find the article by ID
-            if (article) {
-                document.title = article.name; // Set the page title
-                document.getElementById('article-title').textContent = article.name;
-                document.getElementById('article-image').src = article.image;
-                document.getElementById('article-description').textContent = article.description;
-                document.getElementById('article-text').textContent = article.text;
-                document.getElementById('article-category').textContent = `Category: ${article.category}`;
-            } else {
-                document.body.innerHTML = `<h1>Article not found!</h1>`;
-            }
-        }
-
-        // Function to go back to the previous page
-        function goBack() {
-            window.history.back();
-        }
-
-        // Call the function to display the article details
-        displayArticle();
-    </script>
+    <script src="js/detail.js"></script>
 </body>
 </html>
